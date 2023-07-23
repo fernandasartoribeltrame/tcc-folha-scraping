@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+parsel
+dateparser
+Flask
+pandas
+selenium

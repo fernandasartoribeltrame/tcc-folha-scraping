@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notícias</title>
+</head>
+<body>
+    <h1>Notícias</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Caderno</th>
+                <th>Título</th>
+                <th>Data</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in df.iterrows() %}
+            <tr>
+                <td>{{ row['Caderno'] }}</td>
+                <td>{{ row['Título'] }}</td>
+                <td>{{ row['Data'] }}</td>
+                <td><a href="{{ row['Link'] }}">Link</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
